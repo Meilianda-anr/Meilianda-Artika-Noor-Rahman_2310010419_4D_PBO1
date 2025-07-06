@@ -89,5 +89,7 @@ public class Main {
             s.tampilkan();
             total += s.getHarga();
         }
+        System.out.println("Total Biaya: Rp " + (int)total);
+        System.out.println("Terima Kasih telah menggunakan layanan Kami!");
     }
 }
