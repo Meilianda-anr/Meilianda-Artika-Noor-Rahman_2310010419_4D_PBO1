@@ -79,7 +79,11 @@ public class Main {
             Sepatu sepatu = new Sepatu(namaSepatu, ukuran, layanan, harga);
             daftarSepatu.add(sepatu);
         }
-            }
-        }
+            
+        //Output
+        System.out.println("\n=== RINCIAN PESANAN LAUNDRY ===");
+        System.out.println("Nama Pelanggan: " + nama);
+        double total = 0;
+        
     }
 }
