@@ -84,6 +84,10 @@ public class Main {
         System.out.println("\n=== RINCIAN PESANAN LAUNDRY ===");
         System.out.println("Nama Pelanggan: " + nama);
         double total = 0;
-        
+        //Output total pesanan
+        for (Sepatu s : daftarSepatu){
+            s.tampilkan();
+            total += s.getHarga();
+        }
     }
 }
