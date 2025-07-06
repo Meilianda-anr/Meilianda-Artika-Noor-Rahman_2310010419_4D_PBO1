@@ -36,6 +36,50 @@ public class Main {
             
             String layanan = "";
             double harga = 0;
+            
+            //pemilihan layanan dan harga
+            switch (pilihan){
+                case 1:
+                    layanan = "Reguler Cleaning";
+                    harga = 20000;
+                    break;
+                case 2:
+                    layanan = "Fast Cleaning";
+                    harga = 40000;
+                    break;
+                case 3:
+                    System.out.println("Pilih Tingkat Deep Cleaning:");
+                    System.out.println("  a. Mild    = Rp 60.000");
+                    System.out.println("  b. Regular = Rp 80.000");
+                    System.out.println("  c. Hard    = Rp 100.000");
+                    System.out.print("Pilihan (a/b/c): ");
+                    String tingkat = sc.nextLine().toLowerCase();
+
+                    if (tingkat.equals("a")) {
+                        layanan = "Deep Cleaning (Mild)";
+                        harga = 60000;
+                    } else if (tingkat.equals("b")) {
+                        layanan = "Deep Cleaning (Regular)";
+                        harga = 80000;
+                    } else if (tingkat.equals("c")) {
+                        layanan = "Deep Cleaning (Hard)";
+                        harga = 100000;
+                    } else {
+                        System.out.println("Pilihan tidak valid. Default: Deep Cleaning (Mild)");
+                        layanan = "Deep Cleaning (Mild)";
+                        harga = 60000;
+                    }
+                    break;
+                default:
+                    System.out.println("Pilihan tidak valid. Default: Regular Cleaning.");
+                    layanan = "Regular Cleaning";
+                    harga = 20000;
+            }
+
+            Sepatu sepatu = new Sepatu(namaSepatu, ukuran, layanan, harga);
+            daftarSepatu.add(sepatu);
+        }
+            }
         }
     }
 }
